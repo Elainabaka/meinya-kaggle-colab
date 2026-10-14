@@ -1,0 +1,96 @@
+{
+ "model": "qwen3.8-flash-next",
+ "may": "Colab Pro G4 (RTX PRO 6000 Blackwell 96 GB), vLLM 0.31.0, nvidia/Qwen3.8-Flash-Next-NVFP4, MTP 3, ngữ cảnh 131.072, MAX_SEQS 4; gọi từ máy nhà qua Cloudflare Quick Tunnel",
+ "bat_dau": "2026-10-13T20:26:51",
+ "qua_tunnel": true,
+ "viec": {
+  "code (Python)": {
+   "giai_ma": 191.4,
+   "cho_dau": 0.4,
+   "ra": 902
+  },
+  "văn tiếng Việt": {
+   "giai_ma": 128.7,
+   "cho_dau": 0.4,
+   "ra": 765
+  },
+  "văn tiếng Anh": {
+   "giai_ma": 132.0,
+   "cho_dau": 0.3,
+   "ra": 818
+  },
+  "dịch Trung → Việt": {
+   "giai_ma": 150.0,
+   "cho_dau": 0.4,
+   "ra": 106
+  },
+  "toán (có nghĩ)": {
+   "giai_ma": 181.0,
+   "cho_dau": 0.4,
+   "ra": 494
+  }
+ },
+ "de_dai": [
+  {
+   "token_de": 789,
+   "cho_dau": 0.41,
+   "nap_de": 1910,
+   "cho_dau_lan_2": 0.39,
+   "dung": true
+  },
+  {
+   "token_de": 6314,
+   "cho_dau": 0.79,
+   "nap_de": 7974,
+   "cho_dau_lan_2": 0.58,
+   "dung": true
+  },
+  {
+   "token_de": 25419,
+   "cho_dau": 2.31,
+   "nap_de": 11024,
+   "cho_dau_lan_2": 0.82,
+   "dung": true
+  },
+  {
+   "token_de": 51704,
+   "cho_dau": 4.15,
+   "nap_de": 12472,
+   "cho_dau_lan_2": 0.98,
+   "dung": true
+  },
+  {
+   "token_de": 97898,
+   "cho_dau": 7.53,
+   "nap_de": 12998,
+   "cho_dau_lan_2": 1.17,
+   "dung": true
+  }
+ ],
+ "cung_luc": [
+  {
+   "so_luot": 1,
+   "moi_luot": 131.6,
+   "tong_ca_may": 121,
+   "giay": 5.1
+  },
+  {
+   "so_luot": 2,
+   "moi_luot": 118.4,
+   "tong_ca_may": 214,
+   "giay": 5.5
+  },
+  {
+   "so_luot": 4,
+   "moi_luot": 103.2,
+   "tong_ca_may": 206,
+   "giay": 12.0
+  },
+  {
+   "so_luot": 8,
+   "moi_luot": 103.2,
+   "tong_ca_may": 273,
+   "giay": 18.0
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "model": "qwen3.8-flash-next",
+ "may": "Colab Pro G4 (RTX PRO 6000 Blackwell 96 GB), vLLM 0.31.0, nvidia/Qwen3.8-Flash-Next-NVFP4, MTP 3, ngữ cảnh 131.072, MAX_SEQS 4; gọi từ máy nhà qua Cloudflare Quick Tunnel",
+ "bat_dau": "2026-10-13T20:28:58",
+ "qua_tunnel": true,
+ "so_bai": 1319,
+ "dung": 1271,
+ "diem": 96.4,
+ "nghi": false,
+ "token_ra_trung_vi": 335,
+ "giay": 1129
+}
