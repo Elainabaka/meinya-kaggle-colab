@@ -22,12 +22,10 @@ NGUON = GOC / "nguon"
 
 # nguồn -> các nơi đặt notebook (cùng một nội dung), kèm loại máy Colab ghi vào metadata (gpuType)
 NOTEBOOKS = {
-    "qwen38_27b_endpoint.py": [(GOC / "Kaggle" / "Qwen3.8-27B endpoint.ipynb", "T4")],     # llama.cpp, Kaggle 2×T4
     "qwen38_27b_a100.py": [(GOC / "Colab" / "Qwen3.8-27B A100.ipynb", "A100")],          # vLLM INT4 + DSpark
     "qwen38_27b_g4.py": [(GOC / "Colab" / "Qwen3.8-27B G4.ipynb", "G4")],                # vLLM NVFP4 + DSpark
     "qwen38_flash_next_g4.py": [(GOC / "Colab" / "Qwen3.8-Flash-Next G4.ipynb", "G4")],  # vLLM NVFP4 + MTP, bảng n-gram ở RAM
     "qwen38_27b_tpu.py": [(GOC / "Colab" / "Qwen3.8-27B TPU v6e.ipynb", "V6E1")],        # vLLM TPU NVFP4 + MTP
-    "fable_35b_a3b.py": [(GOC / "Kaggle" / "FableCoder 35B-A3B endpoint.ipynb", "T4")],  # llama.cpp, Kaggle 2×T4
 }
 
 

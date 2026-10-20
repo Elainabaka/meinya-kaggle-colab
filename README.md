@@ -1,6 +1,6 @@
 # Meinya Kaggle & Colab: model lớn trên GPU đám mây, ra endpoint chuẩn OpenAI
 
-*English: Jupyter notebooks that turn a free Kaggle 2×T4 session or a Colab Pro G4 into a private, OpenAI-compatible LLM
+*English: Jupyter notebooks that turn a Colab Pro G4 into a private, OpenAI-compatible LLM
 endpoint (gateway with API key, Cloudflare tunnel, vision, tool calling). Headline: **Qwen3.8-Flash-Next (180B MoE, 6B
 active) on a single Colab G4 (RTX PRO 6000, 96 GB): 191 tok/s writing code, 129 tok/s writing Vietnamese, 131K context,
 GSM8K 96.4%, HumanEval 97.0%**, measured from a home connection through the tunnel. Notebook text is in Vietnamese.*
@@ -12,13 +12,11 @@ có Base URL, API key và tên model. Dán ba thứ đó vào app hay thư việ
 |---|---|---|---|
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Elainabaka/meinya-kaggle-colab/blob/main/Colab/Qwen3.8-Flash-Next%20G4.ipynb) | Colab Pro G4 | Qwen3.8-Flash-Next 180B | code 191, văn Việt 129 token/giây |
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Elainabaka/meinya-kaggle-colab/blob/main/Colab/Qwen3.8-27B%20G4.ipynb) | Colab Pro G4 | Qwen3.8-27B | code 168, văn Việt 58 token/giây |
-| [![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/Elainabaka/meinya-kaggle-colab/blob/main/Kaggle/FableCoder%2035B-A3B%20endpoint.ipynb) | Kaggle 2×T4 (miễn phí) | FableCoder 35B-A3B | code khoảng 94, văn 73 token/giây |
-| [![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/Elainabaka/meinya-kaggle-colab/blob/main/Kaggle/Qwen3.8-27B%20endpoint.ipynb) | Kaggle 2×T4 (miễn phí) | Qwen3.8-27B | code khoảng 30 token/giây |
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Elainabaka/meinya-kaggle-colab/blob/main/Colab/Qwen3.8-27B%20A100.ipynb) | Colab Pro A100 | Qwen3.8-27B | chưa thử |
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Elainabaka/meinya-kaggle-colab/blob/main/Colab/Qwen3.8-27B%20TPU%20v6e.ipynb) | Colab TPU v6e-1 | Qwen3.8-27B | chưa thử |
 
-Kaggle cho 30 giờ GPU mỗi tuần, miễn phí (đọc bằng `kaggle quota` ngày 13/10/2026). Máy G4, A100 và TPU của Colab cần gói
-trả phí (Colab Pro trở lên; FAQ của Colab: "premium GPUs subject to availability").
+Máy G4, A100 và TPU của Colab cần gói trả phí (Colab Pro trở lên; FAQ của Colab: "premium GPUs subject to availability").
+Repo không còn notebook chạy endpoint trên Kaggle: luật của Kaggle không cho dùng notebook làm máy chủ cho máy ngoài gọi vào.
 
 ## Số đo nổi bật: Qwen3.8-Flash-Next 180B trên một máy Colab G4
 
@@ -57,8 +55,6 @@ Kết quả từng câu: [`bench/ket_qua/2026-10-13_qwen3.8-flash-next/`](bench/
 |---|---|---|---|
 | `Colab/Qwen3.8-Flash-Next G4.ipynb` | Colab Pro G4 | Qwen3.8-Flash-Next 180B NVFP4, vLLM 0.31.0, MTP 3, 131K | code 191, văn Việt 129 token/giây (13/10/2026) |
 | `Colab/Qwen3.8-27B G4.ipynb` | Colab Pro G4 | Qwen3.8-27B NVFP4, vLLM 0.31.0, DSpark, 262K | code 168, văn Việt 58 token/giây (13/10/2026) |
-| `Kaggle/FableCoder 35B-A3B endpoint.ipynb` | Kaggle 2×T4 (miễn phí) | FableCoder 35B-A3B Q4_K_M, llama.cpp, MTP 2, 262K | code khoảng 94, văn 73 token/giây (13/10/2026) |
-| `Kaggle/Qwen3.8-27B endpoint.ipynb` | Kaggle 2×T4 (miễn phí) | Qwen3.8-27B Q4_K_M, llama.cpp, MTP 3 | code khoảng 30 token/giây (13/10/2026) |
 | `Colab/Qwen3.8-27B A100.ipynb` | Colab Pro A100 | Qwen3.8-27B INT4, vLLM 0.31.0, DSpark | chưa thử |
 | `Colab/Qwen3.8-27B TPU v6e.ipynb` | Colab TPU v6e-1 | Qwen3.8-27B NVFP4, vLLM TPU 0.28.0, MTP 3 | chưa thử |
 
@@ -66,8 +62,7 @@ Mỗi loại chip một notebook riêng vì cách nén và cờ chạy khác nha
 
 ## Cách dùng
 
-1. Bấm nút **Open in Colab** / **Open in Kaggle** ở bảng trên, chọn đúng máy (Kaggle: GPU T4 x2, bật Internet; Colab:
-   Runtime → Change runtime type → G4).
+1. Bấm nút **Open in Colab** ở bảng trên, chọn đúng máy (Runtime → Change runtime type → G4).
 2. **Run all**. Lần đầu mất khoảng 20–30 phút (cài engine, tải model; bản Flash-Next tải 133 GB).
 3. Chép `Base URL`, `API key`, `Model` trong khung **ENDPOINT SẴN SÀNG**. Ví dụ:
 
@@ -79,7 +74,7 @@ print(c.chat.completions.create(model="qwen3.8-flash-next", messages=[{"role": "
 
 Tắt nghĩ cho một lượt: thêm `"chat_template_kwargs": {"enable_thinking": false}`. Nên gọi với `"stream": true`.
 
-**Secret** (không bắt buộc, đặt ở bảng Secrets của Kaggle/Colab, notebook không in ra): `HF_TOKEN` (tải nhanh hơn),
+**Secret** (không bắt buộc, đặt ở bảng Secrets của Colab, notebook không in ra): `HF_TOKEN` (tải nhanh hơn),
 `GATEWAY_TOKEN` (API key cố định), `CF_TUNNEL_TOKEN` + `PUBLIC_BASE_URL` (tunnel có tên, địa chỉ cố định). Không đặt thì mỗi
 phiên sinh khóa mới và dùng Quick Tunnel, địa chỉ đổi mỗi phiên.
 
@@ -87,7 +82,7 @@ phiên sinh khóa mới và dùng Quick Tunnel, địa chỉ đổi mỗi phiên
 
 | Đường dẫn | Là gì |
 |---|---|
-| `Kaggle/`, `Colab/` | Notebook dựng sẵn, không có output |
+| `Colab/` | Notebook dựng sẵn, không có output |
 | `nguon/` | Nguồn của notebook: file Python thường, chia ô bằng `# %%`; `nguon/chung/` là các ô dùng chung |
 | `tao_notebook.py` | Dựng lại notebook từ `nguon/` (`--kiem` chỉ kiểm cú pháp từng ô) |
 | `bench/danh_gia.py`, `bench/ket_qua/` | Bộ đo tốc độ, GSM8K, HumanEval và kết quả gốc của bảng trên |
